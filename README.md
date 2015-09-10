@@ -8,17 +8,24 @@ file permissions for the
 lein run /the/root/directory
 
 ## How it works
-Given a root directory
-Generate a list of all files.
-For each file, check the user/group names. Add the pair to a Set of #{[user group]}.
+First, use the findowner.sh shell command found in the scripts directry of
+jboss_cm project. Run that with the proper directory target (default is /NAS)
+
+Once you've created a dump of all file owner/group in /NAS, move that .csv
+file to the resources/data directory of the ownerfinder project.
+
+You can run the ownerfinder applet by doing
+
+lein run nas-props-dump.csv output-file.csv
+
+This will run the parsing process on the nas-props-dump.csv file and result
+in a unique set of owner/group tags in the output-file.csv file.
+
 
 ## Problems to solve
-- How to get a list of all files in a given subdirectory in Clojure
+- The header is still being dumped into the results
+- The results are in arbitrary order. Would be nice to sort them by OWNERID/GROUPID
 
-## Steps to solve
-- Create a function called from -main that just generates a seq of file names recursive from root
-- Given the list of all file names, map each to its owner/group
-- Reduce the list of owner/groups to a Set of unique owner/group entries
 
 ## License
 
