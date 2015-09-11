@@ -5,4 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/data.csv "0.1.3"]]
+  :keep-non-project-classes true
+  :profiles {:uberjar {:aot :all}}
+  :auto-clean false
   :main ownerfinder.core)

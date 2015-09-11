@@ -14,7 +14,7 @@ gwh99|2541|atd|102|/NAS/scholars/scholar/2014/A00023334/VENICE MAGUNGA RESUME.pd
 
 
 (defn error [& args]
-  (apply println args)
+ (apply println args)
   :error)
 
 
@@ -22,10 +22,6 @@ gwh99|2541|atd|102|/NAS/scholars/scholar/2014/A00023334/VENICE MAGUNGA RESUME.pd
   "Check for the existence of the file; :error if it doesn't exist"
   [src-file]
   (.exists (clojure.java.io/as-file src-file)))
-
-(defn reduce-owners
-  []
-  )
 
 
 (defn collapse-owner-entries
