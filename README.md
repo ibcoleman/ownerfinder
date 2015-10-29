@@ -1,7 +1,7 @@
 # ownerfinder
 
-A Clojure library that will read in a list of files, then generate a set of user/group names that represents the
-file permissions for the 
+A Clojure command line tool that will read in a list of files, then generate a set of user/group names that represents 
+the file permissions for all files.
 
 ## Usage
 
@@ -29,7 +29,7 @@ in a unique set of owner/group tags in the output-file.csv file.
 
 ## License
 
-Copyright © 2015 FIXME
+Copyright © 2015 Ian Coleman
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
